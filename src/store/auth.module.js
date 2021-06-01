@@ -5,6 +5,9 @@ const initialState = user
     ? { status: { loggedIn: true }, user }
     : { status: { loggedIn: false }, user: null };
 
+//초기상태 = user일땐 상태의 loggedIn의 값은 true이고 user 반환
+//반대일 경우 loggedIn의 값은 false이고 user은 null로 반환
+
 export const auth = {
     namespaced: true,
     state: initialState,

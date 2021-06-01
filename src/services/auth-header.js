@@ -1,11 +1,12 @@
 export default function authHeader() {
     let user = JSON.parse(localStorage.getItem('user'));
-
-    if (user && user.accessToken) {
-        return { Authorization: 'Bearer ' + user.accessToken };
+//로컬에서 얻은 유저정보 = user
+    if (user && user.access_Token) {
+        return { Authorization: 'Bearer' + user.access_Token };
     } else {
         return {};
     }
+    //만약 유저정보와 토큰정보 모두 일치할 경우 값을 반환해주고 아니면 끝
 }
 
 

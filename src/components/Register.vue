@@ -1,12 +1,13 @@
 <template>
   <div class="col-md-12">
-    <div class="card card-container">
+    <div class="card card-container container"  style="padding: 10% 0 10% 0; border: none;">
       <img
           id="profile-img"
           src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
           class="profile-img-card"
+          style="width: 100%; max-width: 200px; border-radius: 400px; margin:0 auto;"
       />
-      <Form @submit="handleRegister" :validation-schema="schema">
+      <Form @submit="handleRegister" :validation-schema="schema"  style="width: 100%; max-width: 400px; margin: 0 auto;">
         <div v-if="!successful">
           <div class="form-group">
             <label for="username">Username</label>
@@ -24,8 +25,8 @@
             <ErrorMessage name="password" class="error-feedback" />
           </div>
 
-          <div class="form-group">
-            <button class="btn btn-primary btn-block" :disabled="loading">
+          <div class="form-group" style="margin-top: 20px; width: 100%;">
+            <button class="btn btn-primary btn-block" :disabled="loading" style="margin-top: 10px; width: 100%;">
               <span
                   v-show="loading"
                   class="spinner-border spinner-border-sm"
